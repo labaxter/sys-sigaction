@@ -343,7 +343,7 @@ could be used compatibly and would provide value, patches are welcome.
 
 # COPYRIGHT
 
-    Copyright (c) 2004-2013 Lincoln A. Baxter
+    Copyright (c) 2004-2016 Lincoln A. Baxter
     All rights reserved.
 
     You may distribute under the terms of either the GNU General Public

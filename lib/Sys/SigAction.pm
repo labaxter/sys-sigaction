@@ -1,5 +1,5 @@
 #
-#   Copyright (c) 2004-2013 Lincoln A. Baxter
+#   Copyright (c) 2004-2016 Lincoln A. Baxter
 #
 #   You may distribute under the terms of either the GNU General Public
 #   License or the Artistic License, as specified in the Perl README file,
@@ -544,7 +544,7 @@ could be used compatibly and would provide value, patches are welcome.
 
 =head1 COPYRIGHT
 
-   Copyright (c) 2004-2013 Lincoln A. Baxter
+   Copyright (c) 2004-2016 Lincoln A. Baxter
    All rights reserved.
 
    You may distribute under the terms of either the GNU General Public
