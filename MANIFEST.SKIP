@@ -1,0 +1,10 @@
+*.md
+.env
+CVS
+.*.swp
+MANIFEST.*
+Makefile$
+blib
+pm_to_blib
+Sys-SigAction*
+./*.t
