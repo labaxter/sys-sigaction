@@ -19,7 +19,7 @@ my $tests = 1;
 # its man page ( perldoc Test::More ) for help writing this test script.
 
 use strict;
-#use warnings;
+use warnings;
 
 use Carp qw( carp cluck croak confess );
 use Data::Dumper;
@@ -100,20 +100,25 @@ SKIP: {
 
          print STDERR "
          
-         NOTE: Setting safe=>1... with masked signals does not seem to work.
-         The problem is that the masked signals are not masked when safe=>1.
-         When safe=>0 they are.  
+     NOTE: Setting safe=>1... with masked signals does not seem to work.
+     The problem is that the masked signals are not masked when safe=>1.
+     When safe=>0 they are.  
 
-         If you have an application for safe=>1 and can come up with 
-         a test that works in the context of this module's installation
-         please send me a patch to safe.t that tests it.
-         
-         See the block below this one... which if executed would test safe mode
-         with masked signals... it is a clone of part of mask.t that proves this
-         is broken.
+     If you have an application for safe=>1 and can come up with a patch
+     for this module that gets this test working, or a patch to the test
+     that shows how to fix it, please send it to me. 
 
-         Lincoln
-         \n";
+     See the block below this one... which if executed would test safe mode
+     with masked signals... it is a clone of part of mask.t that proves this
+     is broken.
+
+     This test can be executed from the command line as follows:
+
+         SAFE_T=1 perl -Ilib t/safe.t
+
+     Lincoln
+
+     \n\n";
             
          ok( 1, "skipping test of safe flag for now" ); 
       }

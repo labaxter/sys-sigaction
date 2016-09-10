@@ -3,7 +3,7 @@
 
 #########################
 
-use Test::More tests => 3;
+use Test::More tests => 4;
 BEGIN { use_ok('Sys::SigAction') };
 
 #########################
@@ -12,12 +12,13 @@ BEGIN { use_ok('Sys::SigAction') };
 # its man page ( perldoc Test::More ) for help writing this test script.
 
 use strict;
-#use warnings;
+use warnings;
 
 use POSIX ':signal_h' ;
 use Sys::SigAction qw( sig_name sig_number );
 
 ok( sig_number( 'INT' ) == SIGINT ,'INT => SIGINT' );
-ok( sig_number( 'KILL' ) eq SIGKILL ,'KILL => SIGKILL' );
+ok( sig_number( 'KILL' ) == SIGKILL ,'KILL => SIGKILL' );
+ok( sig_number( 'HUP' ) == SIGHUP ,'HUP => SIGHUP' );
 
 exit;

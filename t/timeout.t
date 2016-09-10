@@ -22,7 +22,7 @@ my $do_subsec = 0;
 # its man page ( perldoc Test::More ) for help writing this test script.
 
 use strict;
-#use warnings;
+use warnings;
 
 use Carp qw( carp cluck croak confess );
 use Data::Dumper;

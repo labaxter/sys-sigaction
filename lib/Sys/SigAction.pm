@@ -7,7 +7,7 @@
 package Sys::SigAction;
 require 5.005;
 use strict;
-#use warnings;
+use warnings;
 use POSIX qw( :signal_h ceil INT_MAX ) ;
 require Exporter;
 use vars qw( $VERSION @ISA @EXPORT_OK %EXPORT_TAGS );
@@ -29,7 +29,7 @@ sub sig_alarm
 
 @ISA = qw( Exporter );
 @EXPORT_OK = qw( set_sig_handler timeout_call sig_name sig_number sig_alarm );
-$VERSION = '0.22';
+$VERSION = '0.23';
 
 use Config;
 my %signame = ();
@@ -401,8 +401,10 @@ Since sigaction() is not fully functional in perl versions less than
 C<%SIG> array.  The version checking and implementation of the 'right'
 code is handled by this module, so the user does not have to write perl
 version dependent code.  The attrs hashref argument to set_sig_handler()
-is silently ignored, in perl versions less than 5.8.  This module has
-been tested with perls as old as 5.005 on solaris.
+is silently ignored, in perl versions less than 5.8.  When this module 
+was developed it was tested on perl 5.005 on solaris.  That was in 2004.
+Now only perl versions >= 5.6 are supported. If you want this to work on 
+perl 5.5 you will have comment out "use warnings" everywhere.
 
 It is hoped that with the use of this module, your signal handling
 behavior can be coded in a way that does not change from one perl version

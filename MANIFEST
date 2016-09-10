@@ -6,7 +6,9 @@ MANIFEST
 t/mask.t
 t/safe.t
 t/name.t
-t/nested.t
+t/inline_nested.t
+t/recursive_nested.t
+t/alternatives.t
 t/number.t
 t/timeout.t
 dbd-oracle-timeout.POD

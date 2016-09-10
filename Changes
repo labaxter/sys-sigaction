@@ -6,7 +6,28 @@ Sys::SigAction::Changes - List of significant changes
 
 Revision history for Sys::SigAction.
 
-=head2 Changes in Sys::SigAction 0.22  20 Nov 2013
+=head2 Changes in Sys::SigAction 0.23  10 September 2016
+
+Responding to Bug: L<https://rt.cpan.org/Public/Bug/Display.html?id=105091>
+Set the maximum depth nested.t will test to when 
+
+   $Config{archname} =~ m/arm/i;
+
+See lib/Sys/SigAction/Nested.pm after runing
+   
+   perl Makefile.PL
+   
+for the max_depth value.
+
+Desupport perl 5.5 (that was soooo long ago > 12 years) so that
+I can turn on use warnings every where: Prompted by the Kwalitee 
+folks who noticed it was not used. 
+
+Set MIN_PERL_VERSION => 5.6.0 in Makefile.PL.
+
+Referenced the new github repository in META.*
+
+=head2 Changes in Sys::SigAction 0.22  July 31 2016
 
 Fix lack of interpolation in Makefile.PL for unsupported MSWin OS.
 

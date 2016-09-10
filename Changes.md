@@ -6,6 +6,20 @@ Sys::SigAction::Changes - List of significant changes
 
 Revision history for Sys::SigAction.
 
+## Changes in Sys::SigAction 0.23  20 Nov 2013
+
+Responding to Bug: [https://rt.cpan.org/Public/Bug/Display.html?id=105091](https://rt.cpan.org/Public/Bug/Display.html?id=105091)
+Set the maximum depth nested.t will test to when 
+
+    $Config{archname} =~ m/arm/i;
+
+See lib/Sys/SigAction/Nested.pm after runing
+
+    perl Makefile.PL
+    
+
+for the max\_depth value.
+
 ## Changes in Sys::SigAction 0.22  20 Nov 2013
 
 Fix lack of interpolation in Makefile.PL for unsupported MSWin OS.
