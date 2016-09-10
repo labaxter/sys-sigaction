@@ -10,7 +10,7 @@ Revision history for Sys::SigAction.
 
 Responding to Bug: [https://rt.cpan.org/Public/Bug/Display.html?id=105091](https://rt.cpan.org/Public/Bug/Display.html?id=105091)
 
-renamed t/nested.t to t/inline\_nested.t (don't execute this on arm platforms
+Renamed t/nested.t to t/inline\_nested.t (don't execute this on arm platforms
 arm perl port appear to be at fault.  See t/inline\_nested.t
 
 create new tests:
@@ -18,8 +18,8 @@ create new tests:
     t/alternatives.t
     t/recursive_nested.t
 
-Allow all arm platforms, but skip t/inline\_nested.t with a warning
-on arm platformas.
+Allow arm platforms, but skip t/inline\_nested.t with a warning
+on arm platforms.
 
 Desupport perl 5.5 (that was soooo long ago > 12 years)... This
 allows me to turn on use warnings everywhere: Prompted by the Kwalitee 
