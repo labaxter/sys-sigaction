@@ -9,24 +9,26 @@ Revision history for Sys::SigAction.
 ## Changes in Sys::SigAction 0.23  10 September 2016
 
 Responding to Bug: [https://rt.cpan.org/Public/Bug/Display.html?id=105091](https://rt.cpan.org/Public/Bug/Display.html?id=105091)
-Set the maximum depth nested.t will test to when 
 
-    $Config{archname} =~ m/arm/i;
+renamed t/nested.t to t/inline\_nested.t (don't execute this on arm platforms
+arm perl port appear to be at fault.  See t/inline\_nested.t
 
-See lib/Sys/SigAction/Nested.pm after runing
+create new tests:
 
-    perl Makefile.PL
-    
+    t/alternatives.t
+    t/recursive_nested.t
 
-for the max\_depth value.
+Allow all arm platforms, but skip t/inline\_nested.t with a warning
+on arm platformas.
 
-Desupport perl 5.5 (that was soooo long ago > 12 years) so that
-I can turn on use warnings every where: Prompted by the Kwalitee 
+Desupport perl 5.5 (that was soooo long ago > 12 years)... This
+allows me to turn on use warnings everywhere: Prompted by the Kwalitee 
 folks who noticed it was not used. 
 
-Set MIN\_PERL\_VERSION => 5.6.0 in Makefile.PL.
+Set MIN\_PERL\_VERSION => 5.6.0 in Makefile.PL. 
 
-Referenced the new github repository in META.\*
+Referenced the new github repository in the generated META.\* files:
+[https://github.com/labaxter/sys-sigaction](https://github.com/labaxter/sys-sigaction)
 
 ## Changes in Sys::SigAction 0.22  July 31 2016
 
