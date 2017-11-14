@@ -139,7 +139,7 @@ sub ssa_alarm($)
    my $secs = shift;
    #print  print "secs=$secs\n";
 
-   if ( $hrworks and ($secs le (INT_MAX()/1_000_000.0) ) )
+   if ( $hrworks and ($secs <= (INT_MAX()/1_000_000.0) ) )
    {
       Time::HiRes::ualarm( $secs * 1_000_000 );
    }
