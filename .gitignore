@@ -1,0 +1,11 @@
+*.swp
+MYMETA.json
+MYMETA.yml
+Makefile
+Makefile.old
+README
+hires.t
+os_info.pl
+t.pl
+tarballs/
+

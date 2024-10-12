@@ -27,18 +27,24 @@ use Sys::SigAction qw( set_sig_handler sig_name sig_number );
 
 ### identify platforms I don't think can be supported per the smoke testers
 my $mask_broken_platforms = {
-    'archname' => { 'i686-cygwin-thread-multi-64int' => 1
+    'archname' => { 'i686-cygwin-thread-multi-64int' => 1,
+                    'i686-cygwin-thread-multi' => 1,
+#                     'x86_64-linux-gnu-thread-multi' => 1 #testing only
                   }
-   ,'perlver' =>  { 'v5.10.1' => 1 
-                  }
+#    ,'perlver' =>  { 'v5.10.1' => 1 
+#                   }
+#    ,'cygwin'  =>  { 'cygwin' -> 1
+#                   }
 };
 
 
 my $on_broken_platform = (
+  (
       exists ( $mask_broken_platforms->{'archname'}->{$Config{'archname'}} )
-   && exists ( $mask_broken_platforms->{'perlver'}->{$^V} )
-   );
-
+#    && exists ( $mask_broken_platforms->{'perlver'}->{$^V} )
+  ) 
+#   or exists ( $mask_broken_platforms->{'osname'}->{$^O} )
+);
 
 my $hup = 0;
 my $int = 0;
@@ -106,7 +112,7 @@ sub sigUSR_2 { #no mask
 #
 SKIP: { 
    plan skip_all => "perl $^V on $Config{'archname'} does not appear to mask signals correctly." if ( $on_broken_platform ); 
-   #plan skip_all => "masking signals is broken on at least some versions of cygwin" if ( $^O =~ /cygwin/ );
+#    plan skip_all => "masking signals is broken on at least some versions of cygwin (submit a patch to make it work)" if ( $^O =~ /cygwin/ );
    plan skip_all => "requires perl 5.8.0 or later" if ( $] < 5.008 ); 
    plan tests => $tests;
    
