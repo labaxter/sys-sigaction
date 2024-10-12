@@ -31,3 +31,9 @@ Copyright (c) 2004-2016 Lincoln A. Baxter
 
 You may distribute under the terms of either the GNU General Public
 License or the Artistic License, as specified in the Perl README file,
+
+# CO-MAINTAINER WANTED
+
+I'm not programming in perl professionally any more, and I have not for some time. I would welcome a co-maintainer for this module.
+
+Contact me if interested.
