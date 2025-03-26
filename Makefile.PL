@@ -67,7 +67,7 @@ print "OK\n" ;
 ##   systems.  And recently a bug was opened on for an
 ##   arm6 system. 
 ##
-##   I beleive (and the smoke tester agreed) that, given
+##   I believe (and the smoke tester agreed) that, given
 ##   the fact this this module tests fine on virtually POSIX
 ##   OSes, that arm systems have a base perl implementation
 ##   of POSIX:sigaction that is likely the root cause.  
@@ -105,7 +105,7 @@ if ( $^O =~ /cygwin/ ) {
    print STDERR q(
 
    NOTE: Smoke testers have discovered that t/mask.t fails on at least
-   some verions cygwin. Specific versions of the os and perl
+   some versions cygwin. Specific versions of the os and perl
    are now protected... but others may be found. On these platforms
    masking signals probably does not work. See the hash reference
    $broken_platforms for platforms known to be broken.

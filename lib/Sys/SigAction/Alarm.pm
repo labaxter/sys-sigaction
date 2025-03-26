@@ -1,3 +1,4 @@
+
 package Sys::SigAction::Alarm;
 require 5.005;
 use strict;

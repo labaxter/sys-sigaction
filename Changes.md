@@ -6,6 +6,13 @@ Sys::SigAction::Changes - List of significant changes
 
 Revision history for Sys::SigAction.
 
+## Changes in Sys::SigAction 0.24  16 October 2024
+
+Update t/mask.t to skip this test on failing cygwin environments.
+
+Note:  I'm not programming in perl professionally any more, and have not for
+some time. I would welcome a co-maintainer for this module. Contact me if interested.
+
 ## Changes in Sys::SigAction 0.23  10 September 2016
 
 Responding to Bug: [https://rt.cpan.org/Public/Bug/Display.html?id=105091](https://rt.cpan.org/Public/Bug/Display.html?id=105091)

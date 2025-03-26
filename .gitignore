@@ -8,4 +8,5 @@ hires.t
 os_info.pl
 t.pl
 tarballs/
-
+.idea
+*.tar.gz

@@ -6,10 +6,7 @@ Sys::SigAction::Changes - List of significant changes
 
 Revision history for Sys::SigAction.
 
-=head2 Changes in Sys::SigAction 0.24  12 October 2024
-
-Don't mask.t when platform is archname is i686-cygwin-thread-multi
-I've know 
+Update t/mask.t to skip this test on failing cygwin environments.
 
 Note:  I'm not programming in perl professionally any more, and have not for
 some time. I would welcome a co-maintainer for this module. Contact me if interested.
